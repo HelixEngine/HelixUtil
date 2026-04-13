@@ -1,0 +1,12 @@
+#pragma once
+#include <HelixEngine/Math/Vector.hpp>
+
+namespace helix
+{
+	struct Transform2D
+	{
+		Vector2F position;
+		Vector2F scale;
+		float rotation = 0.f;
+	};
+}

@@ -14,4 +14,5 @@ file(GLOB HELIX_UTIL_INCLUDE HelixUtil/include/HelixEngine/Util/*.hpp)
 file(GLOB HELIX_UTIL_SOURCES HelixUtil/src/*.cpp)
 
 add_library(${PROJECT_NAME} STATIC ${HELIX_UTIL_INCLUDE} ${HELIX_UTIL_SOURCES})
-target_include_directories(${PROJECT_NAME} PUBLIC HelixUtil/include HelixUtil/extern/fast_io/include)
+target_include_directories(${PROJECT_NAME} PUBLIC HelixUtil/include HelixUtil/extern/fast_io/include HelixUtil/extern/ktm/include)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
