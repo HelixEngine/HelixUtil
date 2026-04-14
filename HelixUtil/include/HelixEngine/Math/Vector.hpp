@@ -121,6 +121,16 @@ namespace helix
 			return Vector4T(x * value, y * value, z * value, w * value);
 		}
 
+		Vector4T operator+(const Vector4T& vec4) const
+		{
+			return Vector4T(x + vec4.x, y + vec4.y, z + vec4.z, w + vec4.w);
+		}
+
+		Vector4T operator-(const Vector4T& vec4) const
+		{
+			return Vector4T(x - vec4.x, y - vec4.y, z - vec4.z, w - vec4.w);
+		}
+
 		static Vector4T normalize(const Vector4T& vector3)
 		{
 			return Vector4T{ktm::normalize(vector3.ktmVecSelf())};
@@ -257,6 +267,16 @@ namespace helix
 			return Vector3T(x * value, y * value, z * value);
 		}
 
+		Vector3T operator+(const Vector3T& vec3) const
+		{
+			return Vector3T(x + vec3.x, y + vec3.y, z + vec3.z);
+		}
+
+		Vector3T operator-(const Vector3T& vec3) const
+		{
+			return Vector3T(x - vec3.x, y - vec3.y, z - vec3.z);
+		}
+
 		static Vector3T normalize(const Vector3T& vector3)
 		{
 			return Vector3T{ktm::normalize(vector3.ktmVecSelf())};
@@ -377,6 +397,16 @@ namespace helix
 		Vector2T operator*(T value) const
 		{
 			return Vector2T(x * value, y * value);
+		}
+
+		Vector2T operator+(const Vector2T& vec2) const
+		{
+			return Vector2T(x + vec2.x, y + vec2.y);
+		}
+
+		Vector2T operator-(const Vector2T& vec2) const
+		{
+			return Vector2T(x - vec2.x, y - vec2.y);
 		}
 
 		static Vector2T normalize(const Vector2T& vector2)
